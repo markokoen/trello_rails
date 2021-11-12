@@ -15,7 +15,8 @@ bundle install
 ```
 - config:
 ```bash
-# Add your Trello keys in the file 'env.yml' in /config
+# Add your Trello keys in a file 'env.yml' in /config
+# /config/env.yml
 TRELLO_KEY: Your Trello api key
 TRELLO_SERVER_KEY: Your Trello server token
 TRELLO_BOARD_ID: The Trello board ID you would like to interact with
