@@ -1,3 +1,18 @@
-<div class="list">
-<p>Heloo</p>
-</div>
+
+Board name: <strong><%= @board %></strong>
+<br><br>
+
+<table>
+    <tr>
+    <% @lists.each do |list| %>
+        <th><%= list['name'] %></th>
+    <% end %>
+    </tr>
+    <tr>
+    <% @lists.each do |list| %>
+        <% list['cards'].each do |card| %>
+            <td><%= card['name'] %></td>
+        <% end %>
+    <% end %>
+    </tr>
+</table>
