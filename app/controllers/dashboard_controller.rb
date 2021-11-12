@@ -21,6 +21,18 @@ class DashboardController < ApplicationController
                 @lists = JSON.parse(result.body)
             end
         end
-
     end
+
+    def new 
+        if params[:title].present?
+            card = {:idList => '618d1f8711a48653e376aaac', :name => params[:title]}
+            result = HTTParty.post(
+                "https://api.trello.com/1/cards?#{ENV['TRELLO_BOARD_ID']}?fields=name&key=#{ENV['TRELLO_KEY']}&token=#{ENV['TRELLO_SERVER_KEY']}", 
+                :body => card.to_json, 
+                :headers => { 'Content-Type' => 'application/json' }
+            )
+            redirect_to "/"
+        end
+    end
+
 end
