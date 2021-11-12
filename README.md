@@ -11,6 +11,10 @@
 ```bash
 bundle install
 ```
+- config:
+```bash
+# Add your Trello keys in the file 'env.yml' in /config
+```
 - run:
 ```bash
 rails s
